@@ -1,0 +1,26 @@
+{
+  "name": "qr-code-manager",
+  "version": "1.0.0",
+  "description": "QR-code based authenticator by LeoMalay",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "mongodb": "^4.1.1",
+    "qrcode": "^1.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leo-Malay/QR-code-manager.git"
+  },
+  "author": "Malay Bhavsar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leo-Malay/QR-code-manager/issues"
+  },
+  "homepage": "https://github.com/Leo-Malay/QR-code-manager#readme"
+}

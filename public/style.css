@@ -1,0 +1,35 @@
+* {
+    margin: none;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input {
+    width: 350px;
+    height: 35px;
+    font-size: 15px;
+    margin: 5px 10px;
+    padding: 0px 10px;
+    border-bottom: 1px solid #000;
+}
+input[type="button"],
+input[type="submit"] {
+    background-color: mediumseagreen;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+}
+.card {
+    padding: 10px 20px;
+    margin: 20px 10px;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.267);
+    width: fit-content;
+}
+#title {
+    font-size: 25px;
+    font-weight: 800;
+}
+#subtitle {
+    font-size: 15px;
+    font-weight: 800;
+}

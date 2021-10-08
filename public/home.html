@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>QR Code Generator</title>
+        <link rel="stylesheet" href="/style.css" />
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <center>
+            <div class="card">
+                <p id="title">QR Code Genertator</p>
+                <p id="desc">
+                    Fillout the following details to generate your QR code
+                </p>
+                <form class="form" action="/generate_qr" method="POST">
+                    <input
+                        name="name"
+                        class="form-control"
+                        placeholder="Name"
+                        type="text"
+                        required
+                    />
+                    <br />
+                    <input
+                        name="enrollment"
+                        class="form-control"
+                        placeholder="Enrollment"
+                        type="text"
+                        required
+                    />
+                    <br />
+                    <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email"
+                        name="email"
+                        required
+                    />
+                    <br />
+                    <input
+                        type="submit"
+                        class="btn btn-primary"
+                        value="Get QR"
+                    />
+                </form>
+                <br />
+                <img
+                    src="https://uploads.sitepoint.com/wp-content/uploads/2017/07/1499401426qr_icon.svg"
+                    alt="QR Code Image"
+                    id="qrimg"
+                    style="width: 100px"
+                />
+                <p id="desc">Scan your QR-code to see the data</p>
+            </div>
+        </center>
+        <script>
+            const getUrlParam = () => {
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                return urlParams;
+            };
+            $(document).ready(function () {
+                const t = getUrlParam();
+                var img_src = t.get("src");
+                while (img_src.includes(" ")) {
+                    img_src = img_src.replace(" ", "+");
+                }
+                document.getElementById("qrimg").src = img_src;
+            });
+        </script>
+    </body>
+</html>
